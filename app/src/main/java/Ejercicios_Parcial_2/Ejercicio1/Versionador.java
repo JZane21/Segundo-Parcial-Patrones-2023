@@ -6,7 +6,7 @@ public class Versionador {
     public void setMemento(Archivo state){
         System.out.println("Versionador> setMemento"+state.getState());
         state.showInfo();
-        archivo =state;
+        this.archivo =state;
     }
 
     public Memento createMemento(){

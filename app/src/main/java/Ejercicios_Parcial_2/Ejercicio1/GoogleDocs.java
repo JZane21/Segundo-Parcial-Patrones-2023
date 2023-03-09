@@ -7,13 +7,10 @@ public class GoogleDocs {
     private int puntero = -1;
     private Versionador versionador = new Versionador();
     
-    public GoogleDocs addMemento(Archivo archivo){
-        Memento memento = new Memento(null);
-        memento.setArchivo(archivo);
+    public void addMemento(Archivo archivo){
         versionador.setMemento(archivo);
         versionesArchivos.add(versionador.createMemento());
         puntero++;
-        return this;
     }
 
     public void realizarComando(String comando){
